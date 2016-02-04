@@ -2,8 +2,20 @@ baseurl = "https://www.corekube.com"
 languageCode = "en-us"
 title = "CoreKube"
 theme = "herring-cove"
+layoutdir = "layouts-main"
 
 [params]
-    [params.links]
-        Home = "/"
-        About = "/about/"
+Copyright = "2016 CoreKube. All rights reserved."
+twitter = "corekube"
+github = "corekube"
+facebook = "corekube"
+
+[params.links]
+    About = "/about"
+    Posts = "/posts"
+
+[taxonomies]
+    author = "authors"
+    series = "series"
+    tag = "tags"
+    category = "categories"
