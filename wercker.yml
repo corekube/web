@@ -1,0 +1,14 @@
+# The steps that will be executed in the build pipeline
+build:
+  box: golang
+  steps:
+    # Get dependencies needed for building & testing
+    - arjen/hugo-build:
+        version: "0.15"
+
+  # Notify slack of build status
+  after-steps:
+      - slack-notifier:
+          url: $SLACK_URL
+          channel: notifications
+          username: wercker
