@@ -1,3 +1,4 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://corekube.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "CoreKube - Core Lessons & Best Practices for Kubernetes"
+#theme = "herring-cove"
