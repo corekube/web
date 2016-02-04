@@ -1,4 +1,4 @@
-baseurl = "https://corekube.com"
+baseurl = "https://www.corekube.com"
 languageCode = "en-us"
 title = "CoreKube - Core Lessons & Best Practices for Kubernetes"
 #theme = "herring-cove"
