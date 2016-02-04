@@ -1,4 +1,9 @@
 baseurl = "https://www.corekube.com"
 languageCode = "en-us"
-title = "CoreKube - Core Lessons & Best Practices for Kubernetes"
-#theme = "herring-cove"
+title = "CoreKube"
+theme = "herring-cove"
+
+[params]
+    [params.links]
+        Home = "/"
+        About = "/about/"
