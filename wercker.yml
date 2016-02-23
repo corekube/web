@@ -2,6 +2,12 @@
 build:
   box: golang
   steps:
+    - script:
+       name: install deps
+       code: |
+         git clone --recursive https://github.com/spf13/hugoThemes.git /themes
+         ln -s /themes themes
+
     # Get dependencies needed for building & testing
     - arjen/hugo-build:
         version: "0.15"
