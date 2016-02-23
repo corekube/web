@@ -1,4 +1,4 @@
-baseurl = "https://www.corekube.com"
+baseurl = "https://corekube.com/"
 languageCode = "en-us"
 title = "CoreKube"
 theme = "herring-cove"
@@ -11,8 +11,8 @@ github = "corekube"
 facebook = "corekube"
 
 [params.links]
-    About = "/about"
-    Posts = "/posts"
+    About = "about"
+    Posts = "posts"
 
 [taxonomies]
     author = "authors"
