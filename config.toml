@@ -1,21 +1,32 @@
 baseurl = "https://corekube.com/"
 languageCode = "en-us"
 title = "CoreKube"
-theme = "herring-cove"
+theme = "hugo-multi-bootswatch"
 layoutdir = "layouts-main"
+paginate = 10
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
 
 [params]
-Copyright = "2016 CoreKube. All rights reserved."
-twitter = "corekube"
-github = "corekube"
-facebook = "corekube"
+    Copyright = "2016 CoreKube. All rights reserved."
+    twitter = "corekube"
+    github = "corekube"
+    facebook = "corekube"
+    use_summaries = true
 
 [params.links]
-    About = "about"
+    Collections = "collections"
+    Categories = "categories"
     Posts = "posts"
+    About = "about"
+
+[params.theme]
+    inverse = true
+    name = "flatly"
 
 [taxonomies]
     author = "authors"
-    series = "series"
+    collection = "collections"
     tag = "tags"
     category = "categories"

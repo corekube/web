@@ -7,10 +7,14 @@
         <meta name="description" content="{{ .Description }}">
         {{ .Hugo.Generator }}
         <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <link href="https://cf2ac9ebd441217c76bd-e63aa5798fb8a38823dce25158b73687.ssl.cf2.rackcdn.com/hc.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        {{ if isset .Site.Params "theme" }}
+            <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/theme/{{ .Site.Params.theme.name }}.css">
+        {{ else}}
+            <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/theme/default.css">
+        {{ end }}
+        <link href="{{ .Site.BaseURL }}/css/style.css" rel="stylesheet">
+        <!--<link href="{{ .Site.BaseURL }}/css/font-awesome.min.css" rel="stylesheet">-->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
     </head>
     <body>
     {{ partial "nav.html" . }}
