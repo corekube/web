@@ -5,7 +5,7 @@ build:
     - script:
        name: install deps
        code: |
-         git clone --recursive https://github.com/spf13/hugoThemes.git /themes
+         git clone https://github.com/spf13/herring-cove /themes/herring-cove
          ln -s /themes themes
 
     # Get dependencies needed for building & testing
