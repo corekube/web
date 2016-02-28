@@ -1,25 +1,25 @@
-    <div class="container">
-        <div class="row col-md-12">
+    <hr>
     <footer>
         <p class="text-muted credit text-center">&copy; {{ with .Site.Params.Copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}. All rights reserved. {{end}}</p>
         <div id="social-wrapper" class="text-center">
             <table style="border-collapse: collapse;">
                 <tr>
                     {{ if isset .Site.Params "twitter" }}
-                        <a href="{{ .Site.Params.twitter }}" target="_blank">
+                    <a href="{{ .Site.Params.twitter }}" target="_blank">
                         <i class="fa fa-twitter-square fa-2x"></i></a>
                     {{ end }}
                     {{ if isset .Site.Params "github" }}
-                        <a href="{{ .Site.Params.github }}" target="_blank">
+                    <a href="{{ .Site.Params.github }}" target="_blank">
                         <i class="fa fa-github-square fa-2x"></i></a>
                     {{ end }}
                 </tr>
             </table>
         </div>
     </footer>
+
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ .Site.BaseURL }}js/jquery.min-2.1.4.js"></script>
-    <script src="{{ .Site.BaseURL }}js/bootstrap.min-3.3.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -31,6 +31,5 @@
         ga('create', 'UA-74391134-1', 'auto');
         ga('send', 'pageview');
     </script>
-
-    </body>
+</body>
 </html>
