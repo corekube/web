@@ -16,10 +16,10 @@ paginate = 10
     use_summaries = true
 
 [params.links]
-    Collections = "collections"
-    Categories = "categories"
-    Posts = "posts"
-    About = "about"
+    collections = "collections"
+    categories = "categories"
+    posts = "posts"
+    about = "about"
 
 [params.theme]
     inverse = true
