@@ -9,21 +9,26 @@ paginate = 10
     post = "/:year/:month/:day/:title/"
 
 [params]
-    Copyright = "2016 CoreKube. All rights reserved."
+    # copyright | used in footer
+    copyright = "2016 CoreKube. All rights reserved."
+
+    # social links | used in footer
     twitter = "corekube"
     github = "corekube"
     facebook = "corekube"
+
+    # show summaries used in /posts
     use_summaries = true
+
+[params.theme]
+    inverse = true
+    name = "flatly"
 
 [params.links]
     collections = "collections"
     categories = "categories"
     posts = "posts"
     about = "about"
-
-[params.theme]
-    inverse = true
-    name = "flatly"
 
 [taxonomies]
     author = "authors"

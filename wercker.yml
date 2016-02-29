@@ -5,7 +5,7 @@ build:
     - script:
        name: install deps
        code: |
-         git clone https://github.com/spf13/herring-cove /themes/herring-cove
+         git clone https://github.com/mpas/hugo-multi-bootswatch /themes/hugo-multi-bootswatch
          ln -s /themes themes
 
     # Get dependencies needed for building & testing
