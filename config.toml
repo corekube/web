@@ -25,7 +25,6 @@ paginate = 10
 
 [params.links]
     collections = "collections"
-    categories = "categories"
     posts = "posts"
     about = "about"
 
