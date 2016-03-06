@@ -31,7 +31,7 @@ As always, CoreKube welcomes any comments, feedback, questions, concerns, and [p
 
 #### **Who is behind CoreKube?**
 
-CoreKube is currently built and maintained by [Mike Metral](https://metralpolis.com/about.html), but we welcome you to [join the party](https://github.com/corekube)!
+CoreKube was built and is currently being maintained by [Mike Metral](https://metralpolis.com/about.html) | [@mikemetral](https://twitter.com/mikemetral), but we welcome you to [join the party](https://github.com/corekube)!
 
 A little fun fact about CoreKube, its name was borrowed from the [OpenStack-based deployment tool](https://github.com/metral/corekube), that goes by the same name.
 
