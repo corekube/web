@@ -5,7 +5,7 @@ layoutdir = "layouts-main"
 paginate = 10
 
 [permalinks]
-    post = "/:year/:month/:day/:title/"
+    posts = "/:year/:month/:day/:slug/"
 
 [params]
     # copyright | used in footer
