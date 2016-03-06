@@ -12,9 +12,9 @@ paginate = 10
     copyright = "2016 CoreKube. All rights reserved."
 
     # social links | used in footer
-    twitter = "corekube"
-    github = "corekube"
-    facebook = "corekube"
+    twitter = "https://twitter.com/corekube"
+    github = "https://github.com/corekube"
+    facebook = "https://facebook.com/corekube"
 
     # show summaries used in /posts
     use_summaries = true

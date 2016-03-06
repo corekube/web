@@ -5,8 +5,12 @@
             <table style="border-collapse: collapse;">
                 <tr>
                     {{ if isset .Site.Params "twitter" }}
-                    <a href="{{ .Site.Params.twitter }}" target="_blank">
+                    <a href="{{ .Site.Params.twitter }}">
                         <i class="fa fa-twitter-square fa-2x"></i></a>
+                    {{ end }}
+                    {{ if isset .Site.Params "facebook" }}
+                    <a href="{{ .Site.Params.facebook }}" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
                     {{ end }}
                     {{ if isset .Site.Params "github" }}
                     <a href="{{ .Site.Params.github }}" target="_blank">
@@ -16,6 +20,7 @@
             </table>
         </div>
     </footer>
+    <hr>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
