@@ -38,3 +38,10 @@ A little fun fact about CoreKube, its name was borrowed from the [OpenStack-base
 #### **What is the best way to contact folks at CoreKube?**
 
 If you would like to get ahold of someone at CoreKube, try pinging us on Twitter: [@CoreKube](https://twitter.com/corekube).
+
+
+<br><br>
+<small>
+CoreKube, and it's management team, have no direct affiliation with Alphabet
+Inc., Google Inc. or Kubernetes.
+</small>
