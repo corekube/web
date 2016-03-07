@@ -115,11 +115,10 @@ Kubernetes Namespaces bring forth a healthy dose of organization and scope for y
 In the **Components** section above, we stated that the `corekube/cert-renew` project is comprised of a set of scripts tasked to do many efforts with regards to the renewal of the SSL/TLS certs:
 
  - One of these tasks, is to have `corekube/cert-renew` save the renewed certs to a Kubernetes Secret that exists in the distinct Namespace of the`corekube/nginx` Pod, as we use different Namespaces for each microservice.
-	 - This Secret,`nginx-ssl-secret`, is the resource that contains the data that `corekube/nginx` needs to secure the connection in its configuration file, `nginx.conf`, as described in [Part #1]({{<relref "posts/2016_03_06-building-corekube-on-kubernetes-part-1.md#configurations-secrets">}}).
-	 - Another task that it performs, is the rolling-update of a ReplicationController, so that the Pod can be given any *renewed* SSL/TLS certs stored in its Secret `nginx-ssl-secret`, as this is the only current way available to [inform a Pod that a Secret has changed](http://kubernetes.io/v1.1/docs/user-guide/secrets.html#secret-and-pod-lifetime-interaction).
-	 - 	Thus, in order for both of these tasks that `corekube/cert-renew` performs to actually function, it **must** be able to interact with the Kubernetes system to perform these actions in some fashion.
+	 - This Secret,`nginx-ssl-secret`, is the resource that contains the data that `corekube/nginx` needs to secure the connection in its configuration file, `nginx.conf`, as described in .
+ - Another task that it performs, is the rolling-update of a ReplicationController, so that the Pod can be given any *renewed* SSL/TLS certs stored in its Secret `nginx-ssl-secret`, as this is the only current way available to [inform a Pod that a Secret has changed](http://kubernetes.io/v1.1/docs/user-guide/secrets.html#secret-and-pod-lifetime-interaction).
 
-If you haven't yet realized it, we're stating that the `cert-renew` container, which is a part of the `corekube/cert-renew` Pod running in its own Namespace, is executing *system-level* commands in the Kubernetes cluster, such as updating a Secret or performing a rolling-update on a ReplicationController, from *within* the Pod itself. *How is it able to perform these softs of administrative actions in Kubernetes? And with what credentials?*
+In order for `corekube/cert-renew` to perform these tasks, it **must** have a means to interact with the Kubernetes system. Better stated, the `cert-renew` container, which is a part of the `corekube/cert-renew` Pod, is executing *system-level* commands in the Kubernetes cluster, such as updating a Secret and performing a rolling-update on a ReplicationController, from *within* the Pod itself. *How is it able to perform these softs of administrative actions in Kubernetes? And with what credentials?*
 
 With [ServiceAccounts](http://kubernetes.io/v1.1/docs/user-guide/service-accounts.html).
 
@@ -140,7 +139,7 @@ Lastly, it's worth mentioning that the ability to use ServiceAccounts with bonus
 
 This concludes the multi-part series on **Building CoreKube on Kubernetes** *for now*.
 
-We hope that you've learned a tremendous amount about the Kubernetes including some best practices and its features that we covered ranging from the Namespace, to ServiceAccounts, and AdmissionControllers.
+We hope that you've learned a tremendous amount about the Kubernetes project, including best practices, its many diverse features that we covered ranging from Namespaces, to ServiceAccounts, and AdmissionControllers.
 
 We have an assortment of topics that we plan on posting in the near future, so please stay tuned. As always, we welcome any discussion, questions, comments and feedback!
 
