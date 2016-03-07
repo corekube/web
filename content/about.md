@@ -42,6 +42,6 @@ If you would like to get ahold of someone at CoreKube, try pinging us on Twitter
 
 <br><br>
 <small>
-CoreKube, and it's management team, have no direct affiliation with Alphabet
+Disclaimer: CoreKube, and it's management team, have no direct affiliation with Alphabet
 Inc., Google Inc. or Kubernetes.
 </small>
