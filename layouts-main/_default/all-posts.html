@@ -2,6 +2,7 @@
 				<!-- <div class="col-md-offset-1 col-md-10"> -->
 				<div class="col-md-offset-1 col-md-10">
 					<h3><a href="{{.Permalink}}">{{ .Title }}</a></h3>
+            <h5>By <a href=/authors/{{ .Params.authors | urlize }}>{{ .Params.authors }}</h5>
 						<small><span class="label label-primary">
 							{{ if .Site.Params.strings.date_format }}
 								{{ .Date.Format .Site.Params.strings.date_format }}
