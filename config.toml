@@ -1,5 +1,6 @@
 languageCode = "en-us"
 title = "CoreKube"
+baseurl = "https://corekube.com"
 theme = "hugo-multi-bootswatch"
 layoutdir = "layouts-main"
 paginate = 10
