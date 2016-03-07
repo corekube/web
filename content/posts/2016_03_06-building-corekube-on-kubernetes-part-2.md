@@ -139,7 +139,7 @@ Lastly, it's worth mentioning that the ability to use ServiceAccounts with bonus
 
 This concludes the multi-part series on **Building CoreKube on Kubernetes** *for now*.
 
-We hope that you've learned a tremendous amount about the Kubernetes project, including best practices, its many diverse features that we covered ranging from Namespaces, to ServiceAccounts, and AdmissionControllers.
+We hope that you've learned a tremendous amount about the Kubernetes project, including best practices, and its diverse set of features that we covered, ranging from Namespaces, to ServiceAccounts, and AdmissionControllers.
 
 We have an assortment of topics that we plan on posting in the near future, so please stay tuned. As always, we welcome any discussion, questions, comments and feedback!
 
