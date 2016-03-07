@@ -32,7 +32,7 @@ Without further ado, let's begin.
 
 # **Background**
 
-[Kubernetes](http:/kubernetes.io) is an open-source cluster manager for Linux container apps that was originally open-sourced by Google in June 2014, and is a descendant of their internal application management systems [Borg and Omega](http://blog.kubernetes.io/2015/04/borg-predecessor-to-kubernetes.html).
+[Kubernetes](http://kubernetes.io) is an open-source cluster manager for Linux container apps that was originally open-sourced by Google in June 2014, and is a descendant of their internal application management systems [Borg and Omega](http://blog.kubernetes.io/2015/04/borg-predecessor-to-kubernetes.html).
 
 Kubernetes is aimed at removing the traditional operational burden of managing servers. It does so by leveling out the cluster to give the app a global set of resources to use, rather than a grouping of physical servers you have to manage. Apps in Kubernetes can certainly operate more [like cattle, than pets](http://www.networkworld.com/article/2165267/cloud-computing/why-servers-should-be-seen-like-cows--not-puppies.html).
 
@@ -46,9 +46,9 @@ CoreKube was initially built with 3 main components, all of which are their own 
 
 The 3 components, at a high-level, are the following:
 
-* [corekube/web](https:/github.com/corekube/web) – This is the static site, in Markdown, which is powered & built into HTML with [Hugo](https://github.com/spf13/hugo).
-* [corekube/nginx](https:/github.com/corekube/nginx) – A Nginx webserver, and Kubernetes microservice, that serves the static site over SSL/TLS using free certificates validated & issued by [LetsEncrypt.org](https://letsencrypt.org).
-* [corekube/cert-renew](https:/github.com/corekube/cert-renew) – A Kubernetes microservice that is tasked with automatically renewing the [LetsEncrypt.org](https://letsencrypt.org) certs, as they require renewal [at least once in 90 days](https://letsencrypt.org/2015/11/09/why-90-days.html).  Once renewed, `corekube/cert-renew` can also update an existing Kubernetes Secret used to house the certs for a Pod i.e. this is how the Pods in `corekube/nginx` know which certs to use. It can also perform a [rolling-update](http://kubernetes.io/v1.1/docs/user-guide/kubectl/kubectl_rolling-update.html) on these same Pods to make use of the updated Secret, as this is only current way of [informing a Pod that a Secret has changed](http://kubernetes.io/v1.1/docs/user-guide/secrets.html#secret-and-pod-lifetime-interaction). 
+* [corekube/web](https://github.com/corekube/web) – This is the static site, in Markdown, which is powered & built into HTML with [Hugo](https://github.com/spf13/hugo).
+* [corekube/nginx](https://github.com/corekube/nginx) – A Nginx webserver, and Kubernetes microservice, that serves the static site over SSL/TLS using free certificates validated & issued by [LetsEncrypt.org](https://letsencrypt.org).
+* [corekube/cert-renew](https://github.com/corekube/cert-renew) – A Kubernetes microservice that is tasked with automatically renewing the [LetsEncrypt.org](https://letsencrypt.org) certs, as they require renewal [at least once in 90 days](https://letsencrypt.org/2015/11/09/why-90-days.html).  Once renewed, `corekube/cert-renew` can also update an existing Kubernetes Secret used to house the certs for a Pod i.e. this is how the Pods in `corekube/nginx` know which certs to use. It can also perform a [rolling-update](http://kubernetes.io/v1.1/docs/user-guide/kubectl/kubectl_rolling-update.html) on these same Pods to make use of the updated Secret, as this is only current way of [informing a Pod that a Secret has changed](http://kubernetes.io/v1.1/docs/user-guide/secrets.html#secret-and-pod-lifetime-interaction). 
 
 Here's a diagram showcasing CoreKube's architecture:
 <br>
