@@ -1,5 +1,9 @@
     <hr>
     <footer>
+      <!-- facebook JS SDK -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+
         <p class="text-muted credit text-center">&copy; {{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}. All rights reserved. {{end}}</p>
         <div id="social-wrapper" class="text-center">
             <table style="border-collapse: collapse;">
@@ -16,6 +20,11 @@
                     <a href="{{ .Site.Params.github }}" target="_blank">
                         <i class="fa fa-github-square fa-2x"></i></a>
                     {{ end }}
+                </tr>
+            </table>
+            <table style="border-collapse: collapse; vertical-align: bottom">
+                <tr>
+                  <div class="fb-like" data-href="https://corekube.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
                 </tr>
             </table>
         </div>
