@@ -11,6 +11,19 @@
 </div>
 
 <div class="container">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-4 col-sm-4">
+      <div class="ribbon" style="position: relative; width: auto">
+        <div class="ribbon-stitches-top"></div>
+        <strong class="ribbon-content"><h1>Look for us @ KubeCon in London this week!</h1></strong>
+        <div class="ribbon-stitches-bottom"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="container">
     <div class="row text-center">
         <!--We *need* to give mobile more space-->
         <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
@@ -33,7 +46,16 @@
     </div>
 </div>
 
-<br></br>
+<hr>
+<div class="container">
+  <div class="row text-center">
+    <u><h3>Latest Contribution:</h3></u>
+    {{ $paginator := .Paginate (where .Data.Pages "Section" "posts") 1 }}
+    {{ range $paginator.Pages }}
+    {{ .Render "latest-post" }}
+    {{ end }}
+  </div>
+</div>
 
 <div class="container">
     <div class="row text-center">

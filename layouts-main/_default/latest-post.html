@@ -1,0 +1,40 @@
+			<div class="row">
+				<!-- <div class="col-md-offset-1 col-md-10"> -->
+				<div class="col-md-offset-1 col-md-10">
+					<h4><a href="{{.Permalink}}">{{ .Title }}</a></h4>
+            <h5>By <a href=/authors/{{ .Params.authors | urlize }}>{{ .Params.authors }}</a></h5>
+						<small><span class="label label-primary">
+							{{ if .Site.Params.strings.date_format }}
+								{{ .Date.Format .Site.Params.strings.date_format }}
+							{{ else }}
+								{{ .Date.Format "Mon, Jan 2, 2006" }}
+							{{ end }}</span>&nbsp;
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					{{ if .Site.Params.use_summaries }}
+	  					{{ if .Params.nocut }}
+		  					{{ .Content }}
+			  			{{ else }}
+	  		  				{{ .Summary }}
+					  		<br>
+						  	<a href="{{ .Permalink }}">
+						  	{{ if .Site.Params.strings.read_more_link }}
+						  		{{ .Site.Params.strings.read_more_link }}
+						  	{{ else }}
+                <u>Read More</u>
+						  	{{ end }}</a>
+					  	{{ end }}
+					{{ else }}
+						{{ .Content }}
+					{{ end }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
