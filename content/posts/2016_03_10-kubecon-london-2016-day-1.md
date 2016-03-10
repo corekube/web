@@ -35,15 +35,13 @@ Around 500 folks from around the globe gathered to review the latest & upcoming 
 
 # **Outline**
 
-* [Opening Keynote: Pushing Kubernetes Forward]({{<ref "#">}})
+* [Opening Keynote: Pushing Kubernetes Forward]({{<ref "#day-1-opening-keynote-kubernetes-update">}})
 * [Kubernetes State of the Union]({{<ref "#kubernetes-state-of-the-union">}})
-* [What is OpenStack's role in a Kubernetes world?]({{<ref "#what-is-openstacks-role-in-a-kubernetes-world">}})
+* [What is OpenStack's role in a Kubernetes world?]({{<ref "#what-is-openstack-s-role-in-a-kubernetes-world">}})
 * [Hybrid Apps: Orchestrating Cloud-Native and Traditional Application Architectures]({{<ref "#hybrid-apps-orchestrating-cloud-native-and-traditional-application-architectures">}})
-* [Kubernetes in Production in The New York Times newsroom]({{<ref "#kubernetes-in-production-in-the-new-york-times-newsroom">}})
 * [Monitoring Microservices: Docker, Kubernetes, and GKE Visibility at Scale]({{<ref "#monitoring-microservices-docker-kubernetes-and-gke-visibility-at-scale">}})
-* [Panel: Communities, Contribution and Kubernetes]({{<ref "#panel-communities-contribution-and-kubernetes">}})
 
-## **Opening Keynote**
+## **Day 1 Opening Keynote: Kubernetes Update**
 
 * [Talk Abstract](https://kubeconeurope2016.sched.org/event/5oMA/day-1-opening-keynote-kubernetes-update)
 * Summary
