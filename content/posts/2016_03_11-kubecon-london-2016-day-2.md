@@ -1,6 +1,6 @@
 +++
 date = "2016-03-11T09:00:00-08:00"
-tags = ["KubeCon", "Performance", "Trusted Computing", "Scheduling", "Hardware"]
+tags = ["KubeCon", "Performance", "Trusted Computing", "Hardware"]
 title = "KubeCon London 2016 - Day 2"
 slug = "kubecon-london-2016-day-2"
 authors = "Mike Metral"
