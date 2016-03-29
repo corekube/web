@@ -67,7 +67,7 @@ Here's a diagram showcasing CoreKube's architecture:
 <br>
 Given the overall big picture, let's hone in on the first two components, the `corekube/web` and `corekube/nginx` projects, that drive the content behind the site.
 
-***Note***: *We will cover the `corekube/cert-renew` microservice in the [next installment]({{<relref "posts/2016_03_06-building-corekube-on-kubernetes-part-2.md">}}) of this multi-part series, as it is deserving of its own post.*
+***Note***: *We will cover the `corekube/cert-renew` microservice in the next installment of this multi-part series, as it is deserving of its own post.*
 
 # **Microservices**
 
@@ -244,7 +244,7 @@ For instance, the `nginx` container doesn't *only* serve the HTML content, it do
 
 Because `nginx`specifically consumes these certs via Secret, it doesn't have to depend on some extraneous datasource nor have to worry about renewing the certs once every 90 days per [LetsEncrypt.org requirements](https://letsencrypt.org/2015/11/09/why-90-days.html). Instead, it leaves these tasks to the other one of main 3 components that make up CoreKube:  the`cert-renew` microservice.
 
-***Reminder:*** *`cert-renew`, its responsibilities, and architecture, are covered in the [follow-up installment]({{<relref "posts/2016_03_06-building-corekube-on-kubernetes-part-2.md">}}) of this multi-part series.*
+***Reminder:*** *`cert-renew`, its responsibilities, and architecture, are covered in the follow-up installment of this multi-part series.*
 
 Making use of Secrets enforces that we don't hard-code configuration settings into the manifest, nor accidentally publish sensitive information such as usernames, passwords or the SSL/TLS certs. Secrets also aid in keeping the physical existence of sensitive information to a minimum. Given the fact that the Pod **must** define its Secrets in the manifest before it can be instantiated, this automatically ensures that the Pod **cannot** be stood up without the Secrets already existing in the Kubernetes system -- this approach creates a great proverbial system of checks & balances for your microservice and the informational items it relies on.
 
