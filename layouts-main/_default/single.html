@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
                 <h3>{{ .Title }}</h3>
-                <h5>By <a href=/authors/{{ .Params.authors | urlize }}>{{ .Params.authors }}</h5>
+                <h5>By <a href=/authors/{{ .Params.authors | urlize }}>{{ .Params.authors }}</a></h5>
 				<span class="label label-primary">{{ if .Site.Params.strings.date_format }}{{ .Date.Format .Site.Params.strings.date_format }}{{ else }}{{ .Date.Format "Mon, Jan 2, 2006" }}{{ end }}</span>{{ if .Params.categories }} in
                     {{ range $i, $e :=.Params.categories }}
                         {{if $i}} , {{end}}
@@ -47,6 +47,7 @@
             {{ .Content }}
         </div>
     </div>
+    <br>
     <div class="row">
       <div class="col-md-offset-1 col-md-10" style="display:flex; align-items:center">
 
@@ -64,8 +65,8 @@
 
       <div class="col-md-offset-1 col-md-10">
         <ul class="pager">
-          {{with .PrevInSection}} &nbsp;<li class="previous"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
-          {{with .NextInSection}} &nbsp;<li class="next"><a href="{{.Permalink}}"> {{.Title}}</a></li>{{end}}
+          {{with .PrevInSection}} &nbsp;<li class="previous"><a href="{{.Permalink}}">Prev: {{.Title}}</a></li>{{end}}
+          {{with .NextInSection}} &nbsp;<li class="next"><a href="{{.Permalink}}">Next: {{.Title}}</a></li>{{end}}
         </ul>
       </div>
     </div>
